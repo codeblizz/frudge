@@ -13,7 +13,7 @@ Plus you will see how to use correctly:
 - Json-placeholder for API Consumption.
 
 ### "To run Frontend - Client"
-Make sure to type this on your console "cd client" and then run "npm install" to install all dependencies before running "npm start" which starts the  react dev server. This will automatically open your default browser and run the app on http:\\localhost:3000
+Make sure to type this on your MAC terminal - "cd client" and click enter, then type "npm install" and enter to install all dependencies and finally type "npm start" and enter to starts the react dev server locally on your machine. This will automatically open your default browser and run the app on http://localhost:3000.
 
 ## Browser Support
 Compatible with every evergreen browser. 
