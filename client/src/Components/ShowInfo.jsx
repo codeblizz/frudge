@@ -6,11 +6,11 @@ class ShowInfo extends React.Component {
     }
 
     render() {
-        const { onClick } = this.props;
+        const { onClick, show } = this.props;
         return (
-            <div>
-                <div className="showInfo">
-                    <h1 className="d-flex justify-content-center mb-4">All your finances in one place.</h1>
+            <div className="">
+                <div className={`showInfo-${show}`}>
+                    <h1 className="d-flex justify-content-center mb-2">All your finances in one place.</h1>
                     <p className="d-flex justify-content-center mb-4 text-break">
                         Find out how our team of highly qualified financial consultants can help
                         you achieve your financial goals.

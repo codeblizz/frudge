@@ -26,10 +26,10 @@ const MainContent = () => {
     }
   }
   return (
-    <div className="container-fluid">
-        <div className="row-fluid">
+    <div className="parentDiv container-fluid">
+        <div className="parentDiv row-fluid">
           <LeftSideBar navClick={navClick}/>
-          <div className="">
+          <div className="parentDiv">
             <Switch>
               <Route exact path="/dashboard" render={()=><Dashboard sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
               <Route exact path="/advisors" render={()=><AdvisoryPage />}/>
@@ -46,7 +46,7 @@ const MainContent = () => {
 function App() {
   return (
     <Router>         
-        <div style={{ overflow: "auto", height: "100vh" }}>
+        <div className="parentDiv">
           <Switch>  
             <Route exact path="/" render={()=><LandingPage />}/>
             <Route component={MainContent}/>

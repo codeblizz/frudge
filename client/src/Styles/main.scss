@@ -3,8 +3,19 @@
 html {
     font-family: "Helvetica Neue";
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
     font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-scrollbar: 100%;
+}
+
+.parentDiv {
+  overflow: hidden;
+  top:0px;
+  left: 0px;
+  height: 100vh;
+  background-image: url("../Assets/bgColor-fudge.png");
+  background-image: initial;
+  position: relative;
 }
 
 body {
@@ -29,30 +40,87 @@ span {
     float: right;
 }
 
-div.landingPageBG {
+div.landingPageBG-false {
     background-image: url("../Assets/bgColor-fudge.png"), 
         url("../Assets/bg-fudge.png"),
         radial-gradient(rgb(12, 17, 12), rgba(2, 31, 21, 0));
     background-size: cover, 50vw;
     object-fit: cover, cover;
-    background-position-x: center, center;
+    background-position: 50% 0;
     background-blend-mode: difference, initial;
     background-repeat: no-repeat, no-repeat;
     color: $landingPageTextColor;
     height: 100vh;
-    position: absolute;
-    left: 0;
+    margin-top: 0%;
+    position: relative;
+    left: 0px;
+    top: 0px;
     width: 100vw;
     overflow: hidden;
     font-weight: lighter;
 }
 
+div.landingPageBG-true {
+  background-image: url("../Assets/bgColor-fudge.png"), 
+    url("../Assets/bg-fudge.png"),
+    radial-gradient(rgb(12, 17, 12), rgba(2, 31, 21, 0));
+  background-size: cover, 50vw;
+  object-fit: cover, cover;
+  background-blend-mode: difference, initial;
+  background-position: 50%, 50%;
+  animation: 1.5s bg-slide;
+  background-repeat: no-repeat, no-repeat;
+  color: $landingPageTextColor;
+  position: relative;
+  height: 100vh;
+  margin-top: 0%;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  overflow: hidden;
+  font-weight: lighter;
+}
+
+.dashSlder {
+  width: 100px;
+  height: 30px;
+  transition: max-width 5s ease-out;
+  max-width: 6900px;
+}
+
+.comtainer-slider {
+  display: block;
+  width: 900px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slide-side 5s forwards;
+  animation-direction: alternate;
+  max-width: 6900px;
+}
+
+.comtainer-slider .comp-slider {
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes slide-side {
+  from {
+    margin-left: 20%;
+    align-self: center;
+    width: 900px;
+  }
+  to {
+    margin-left: 100%;
+    width: 6900px;
+  }
+}
+
 .arrowPos1 {
-    margin-bottom: 20rem;
+    margin-bottom: 18rem;
 }
 
 .arrowPos2 {
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
 }
   
   .navbar {
@@ -135,28 +203,15 @@ div.landingPageBG {
   }
 
   img.imgLogo {
-    animation: 1s slide-up;
+    animation: 1.5s slide-up;
     margin-top: 0%;
-  }
-
-  div.showInfo {
-    height: 200px;
-    overflow: hidden;
   }
   
-  div.showInfo p {
-    animation: 1s slide-up;
+  div.showInfo div.fudgeLogo  p h1 div.bthInfo button {
+    animation: 1.5s slide-up;
     margin-top: 0%;
-  }
-
-  div.showInfo h1 {
-    animation: 1s slide-up;
-    margin-top: 0%;
-  }
-
-  div.showInfo div.bthInfo button {
-    animation: 1s slide-up;
-    margin-top: 0%;
+    // height: 200px;
+    // overflow: hidden;
   }
   
   @keyframes slide-up {
@@ -167,6 +222,15 @@ div.landingPageBG {
     to {
       margin-top: 0%;
       height: 100%;
+    }
+  }
+
+  @keyframes bg-slide {
+    from {
+      background-position-y: 50%, 0;
+    }
+    to {
+      background-position-y: 50%, 50%;
     }
   }
 
@@ -206,10 +270,10 @@ div.landingPageBG {
   }
 
   .card-stats {
-    // box-shadow: 25rem;
-    // border-color: linear-gradient(rgb(12, 17, 12), rgba(2, 31, 21, 0));
-    // border-width: 20px;
-    // background-color: #EBEBEB;
+    box-shadow: 25rem;
+    border-color: linear-gradient(rgb(12, 17, 12), rgba(2, 31, 21, 0));
+    border-width: 20px;
+    background-color: #EBEBEB;
   }
 
   .slabel {
@@ -224,14 +288,6 @@ div.landingPageBG {
     border: none;
     width: 5%;
   }
-
-  // select {
-  //   border: none;
-  //   -webkit-appearance: none;
-  //   -moz-appearance: none;
-  //   appearance: none;
-  //   -ms-appearance: none; 
-  // }
 
 //   .showInfo {
 //     opacity: 1;

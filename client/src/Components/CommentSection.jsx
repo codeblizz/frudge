@@ -19,6 +19,7 @@ const CommentSection = () => {
     useEffect(() => {
         fetchCommentData();
     }, []);
+    
     return (
         <div className="container">
             {comment.map((c) => (
