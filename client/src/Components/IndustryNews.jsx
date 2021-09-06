@@ -7,7 +7,7 @@ const IndustryNews = () => {
 
     const fetchNewsFeed = async () => {
         try {
-            let res = await axios("https://jsonplaceholder.typicode.com/posts?_limit=1")
+            let res = await axios("https://jsonplaceholder.typicode.com/posts?_limit=2")
             setNewsFeed(res.data);
         } catch(err) {
             console.log("error");
@@ -19,8 +19,8 @@ const IndustryNews = () => {
     }, []);
 
     return (
-        <>
-        <b>Industry News</b>
+        <div className="col">
+        <b className="col">Industry News</b>
         {newsFeed.map((feed, i) => (
             <div key={i} className="list-group">
                 <a href="#" className="list-group-item list-group-item-action">
@@ -43,7 +43,7 @@ const IndustryNews = () => {
                 </a>
             </div>
         ))}
-        </>
+        </div>
     )
 }
 export default IndustryNews;

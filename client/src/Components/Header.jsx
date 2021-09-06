@@ -21,19 +21,21 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="container">
-            {user.map((user) => (
-                <div className="row">
-                    <div className="col-1 justify-content-start mt-2">
-                        <img src={UserImg} className="ellipse"/>
-                    </div>
-                    <div className="col justify-content-start mt-2 message">
-                        <p className="message">
-                            Welcome, <strong>{user.name}</strong> Here's your personalized financial dashboard
+            <div className="col">
+                {user.map((user) => (
+                <div className="col-sm-8">
+                    <div className="d-flex flex-nowrap p-0 row">
+                        <div className="col-1 mt-2">
+                            <img src={UserImg} className="m-2 ellipse"/>
+                        </div>
+                        <p className="d-flex col-5 text-nowrap mt-3 justify-conter-start align-content-center message">
+                            Welcome, <b className="mx-2">{user.name}</b> Here's your personalized financial dashboard
                         </p>
                     </div>
-                    <div className="col mt-2">
-                        <div className="row">
+                </div>))}
+                {/* <div className="col-sm-4 mt-2">
+                    <div className="row no-padding">
+                        <div className="form-group g-1 m-0">
                             <label className="form-label col">Currency</label>
                             <select className="form-select form-select-sm col selectHeader p-0 m-0">
                                 <option value="GBP">GBP</option>
@@ -46,10 +48,8 @@ const Header = () => {
                             </select>
                         </div>
                     </div>
-                </div>
-            ))}
-            <h1 className="fs-5 exception card-title">Dashboard Home</h1>
-        </div>
+                </div> */}
+            </div>
     )
 }
 export default Header;

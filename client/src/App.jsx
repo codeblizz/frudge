@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.scss';
 import {
   BrowserRouter as Router,
@@ -16,11 +16,23 @@ import LeftSideBar  from "./Components/LeftSideBar";
 
 const MainContent = () => {
   const [ sidebar, setSidebar ] = useState(true);
-  const showSidebar = () => setSidebar(!sidebar);
   const history = useHistory();
 
+  const showSidebar = () => {
+    let winWidth = window.innerWidth;
+    let visualViewport = window.visualViewport.width;
+    if( visualViewport < winWidth ) {
+      setSidebar(!sidebar);
+    }
+  }
+
+  useEffect(() => {
+    showSidebar();
+  }, []) 
+
+  console.log("visualViewport", window.visualViewport);
+
   const navClick = (e, item) => {
-    console.log(">>>>", e.target);
     if(item){
       history.push(item.path);
     } else {
@@ -29,10 +41,21 @@ const MainContent = () => {
   }
 
   return (
-    <div className="container-fluid">
-        <div className="row-fluid">
-          <LeftSideBar navClick={navClick}/>
-          <div className="">
+    <div className="col appMain">
+      { sidebar ?
+        ( <div className="row">
+            <LeftSideBar className="col" navClick={navClick}/>
+            <div className="col">
+              <Switch>
+                <Route exact path="/dashboard" render={()=><Dashboard sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
+                <Route exact path="/advisors" render={()=><AdvisoryPage />}/>
+                <Route exact path="/documents" render={()=><DocumentPage />}/>
+                <Route exact path="/feed" render={()=><NewsFeedPage />}/>
+                <Route exact path="/support" render={()=>(<SupportPage />)} />  
+              </Switch>
+            </div>
+          </div> ) : (
+          <div className="col">
             <Switch>
               <Route exact path="/dashboard" render={()=><Dashboard sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
               <Route exact path="/advisors" render={()=><AdvisoryPage />}/>
@@ -41,7 +64,7 @@ const MainContent = () => {
               <Route exact path="/support" render={()=>(<SupportPage />)} />  
             </Switch>
           </div>
-        </div>
+        )}
     </div>
   )
 }

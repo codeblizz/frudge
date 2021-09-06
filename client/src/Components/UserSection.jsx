@@ -14,7 +14,7 @@ const UserSection = () => {
 
     const fetchUserData = async () => {
         try {
-            let res = await axios("https://jsonplaceholder.typicode.com/users?_limit=1");
+            let res = await axios("https://jsonplaceholder.typicode.com/users?_limit=3");
             setUser(res.data);
         } catch(error) {
             console.log("error");
@@ -26,11 +26,11 @@ const UserSection = () => {
     }, []);
 
     return (
-        <div className="container">
+        <div className="col m-0">
+            <b className="mb-1 col">Users</b>
             {user.map((user) => (
-            <div className="list-group">
-                <h6 className="mb-1">Users</h6>
-                <div className="list-group-item">
+            <div className="list-group col">
+                <div className="list-group-item col">
                     <div className="row mb-2">
                         <div className="col">
                             <img src={comment1} className="ellipse mt-2"/>
@@ -41,7 +41,7 @@ const UserSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="list-group-item">
+                <div className="list-group-item col">
                     <div className="row row-col-2 mb-2">
                         <div className="col">
                             <img src={comment2} className="ellipse mt-2"/>
@@ -52,7 +52,7 @@ const UserSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="list-group-item">
+                <div className="list-group-item col">
                     <div className="row row-col-2 mb-2">
                         <div className="col">
                             <img src={comment3} className="ellipse mt-2"/>

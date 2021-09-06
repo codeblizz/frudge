@@ -19,8 +19,8 @@ const PerformanceGraph = () => {
     };
 
     return (
-        <div className="allParagraph">
-            <b>My Performance</b>
+        <div className="allParagraph col">
+            <b className="col" >My Performance</b>
             <Line ref={chartRef} data={lineData} />
         </div>
     )

@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import Header from "./Header.jsx";
 import GridSection from "./GridSection.jsx";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
+    const { sidebar } = props;
     return (
-        <div className="allParagraph card mainContent">
-            <Header />
-            <div className="allParagraph card-body container"> 
-                <GridSection />
-            </div>
+        <div className={`col border border-0 ${sidebar} ? mainContent : mainContent`}>
+            <Header className="col m-0"/>
+            <h1 className="fs-5 exception card-title mb-4">Dashboard Home</h1>
+            <GridSection className="col"/>
         </div>
     )
 }

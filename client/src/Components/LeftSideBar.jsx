@@ -7,37 +7,41 @@ import fudge_logo from "../Assets/fudge_logo.png";
 
 const LeftSideBar = (props) => {
   const { sidebar, showSidebar, navClick } = props;
+  
 
   return (
-    <>
-      <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items'>
-            <li className='navbar-logo' onClick={showSidebar}>
-              <Link to='#' className='logo-bars'>
-                <img 
-                    src={fudge_logo} 
-                    alt="fudge-logo"                             
-                    height="25vh"
-                    width="80vw">
-                </img>
-              </Link>
-            </li>
+    <div className="col-sm-12">
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <nav className={sidebar ? "nav-menu active col" : "nav-menu col" }>
+          <div className="col m-4">
+            <div className="navbar-brand logo-bars" onClick={showSidebar}>
+              <img 
+                  src={fudge_logo} 
+                  alt="fudge-logo"                             
+                  height="25vh"
+                  width="80vw"
+                >
+              </img>
+            </div>
             {MenuNames.map((item, index) => {
               return (
-                <li key={index} className={item.cName} onClick={(e) => navClick(e, item)}>
-                  <Link to={item.path} className={item.cName}>
-                    <span>{item.icon}</span>
-                    <span>{item.title}</span>
-                    <span>{item.anchor}</span>
-                  </Link>
-                </li>
+                <div className="nav-menu-items col">
+                  <ul key={index} className={`${item.cName} navbar-nav row`}>
+                    <li className="nav-items col" >
+                      <Link to="#" className="col" onClick={(e) => navClick(e, item)}>
+                        <span className="nav-text col">{item.icon}</span>
+                        <span className="nav-text col">{item.title}</span>
+                        <span className="nav-text col">{item.anchor}</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               );
             })}
-          </ul>
+          </div>
         </nav>
       </IconContext.Provider>
-    </>
+    </div>
   );
 }
 

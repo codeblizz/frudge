@@ -33,14 +33,14 @@ const GridFinancialHealth = () => {
     };
 
     return (
-        <>
-            <b>My Financial Health</b>
+        <div className="col">
+            <b className="col">My Financial Health</b>
             <span className="d-flex p-3 card-stats">
-                <span class="card-body p-2 border border-2 mx-20px h-300">
+                <span class="card-body p-2 border border-2 mx-20px h-200">
                     <Scatter ref={chartRef} data={data} />
                 </span>
             </span>
-        </>
+        </div>
     )
 }
 export default GridFinancialHealth;
