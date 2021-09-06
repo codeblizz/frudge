@@ -1,5 +1,5 @@
 # fudge app 
-This is a Fin-Tech App with MERN Stack.
+This is a Create React App.
 
 ## Frontend - Client Folder
 Built with create-react-app, functional class components, redux, nodejs, expressjs, reactstrap, javascript, css, html5 and ant design.
