@@ -131,7 +131,7 @@ div.landingPageBG-true {
     align-items: flex-start;
     margin-left: 0rem;
     text-decoration: none;
-    list-style: none;
+    list-style-type: none;
   }
   
   .logo-bars {
@@ -150,7 +150,7 @@ div.landingPageBG-true {
     left: 0;
     transition: 850ms;
     text-decoration: none;
-    list-style: none;
+    list-style-type: none;
   }
 
   .nav-menu-hidden {
@@ -162,7 +162,11 @@ div.landingPageBG-true {
     transition: 350ms;
     text-decoration: none;
     background-color: $bgNavMenu;
-    list-style: none;
+    list-style-type: none;
+  }
+
+  ul {
+    list-style-type: none;
   }
 
   @keyframes nav-show {
@@ -178,7 +182,7 @@ div.landingPageBG-true {
     padding: 8px 0px 8px 8px;
     height: 50px;
     color: #f5f5f5;
-    list-style: none;
+    list-style-type: none;
     background-color: $bgNavMenu;
     text-decoration: none;
   }
@@ -186,7 +190,7 @@ div.landingPageBG-true {
   .navbar-nav .navbar-nav .nav-items .nav-text a {
     text-decoration: none;
     color: #f5f5f5;
-    list-style: none;
+    list-style-type: none;
     font-size: 13px;
     background-color: $navbartextColor;
     cursor: pointer;
@@ -195,6 +199,7 @@ div.landingPageBG-true {
   .nav-text a:hover {
     cursor: pointer;
     color: $navbarHoverColor;
+    list-style-type: none;
     text-decoration: none;
   }
 
@@ -203,7 +208,7 @@ div.landingPageBG-true {
     text-decoration: none;
     border-radius: 5px;
     width: 40%;
-    list-style: none;
+    list-style-type: none;
   }
   
   .navbar-logo {
@@ -221,6 +226,7 @@ div.landingPageBG-true {
     align-items: center;
     text-decoration: none;
     background-color: $bgNavMenu;
+    list-style-type: none;
   }
 
   img.imgLogo {
