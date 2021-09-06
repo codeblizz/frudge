@@ -25,10 +25,11 @@ const LeftSideBar = (props) => {
             </li>
             {MenuNames.map((item, index) => {
               return (
-                <li key={index} className={item.cName} onClick={() => navClick(item)}>
-                  <Link to={item.path} className="nav-text">
+                <li key={index} className={item.cName} onClick={(e) => navClick(e, item)}>
+                  <Link to={item.path} className={item.cName}>
                     <span>{item.icon}</span>
                     <span>{item.title}</span>
+                    <span>{item.anchor}</span>
                   </Link>
                 </li>
               );

@@ -18,18 +18,21 @@ const MainContent = () => {
   const [ sidebar, setSidebar ] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
   const history = useHistory();
-  const navClick = (item) => {
+
+  const navClick = (e, item) => {
+    console.log(">>>>", e.target);
     if(item){
       history.push(item.path);
     } else {
       history.push("/")
     }
   }
+
   return (
-    <div className="parentDiv container-fluid">
-        <div className="parentDiv row-fluid">
+    <div className="container-fluid">
+        <div className="row-fluid">
           <LeftSideBar navClick={navClick}/>
-          <div className="parentDiv">
+          <div className="">
             <Switch>
               <Route exact path="/dashboard" render={()=><Dashboard sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
               <Route exact path="/advisors" render={()=><AdvisoryPage />}/>
@@ -46,7 +49,7 @@ const MainContent = () => {
 function App() {
   return (
     <Router>         
-        <div className="parentDiv">
+        <div className="">
           <Switch>  
             <Route exact path="/" render={()=><LandingPage />}/>
             <Route component={MainContent}/>

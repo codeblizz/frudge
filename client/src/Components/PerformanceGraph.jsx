@@ -19,7 +19,7 @@ const PerformanceGraph = () => {
     };
 
     return (
-        <div className="allParagraph container w-100">
+        <div className="allParagraph">
             <b>My Performance</b>
             <Line ref={chartRef} data={lineData} />
         </div>

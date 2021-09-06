@@ -10,6 +10,7 @@ export const MenuNames = [
     path: '/dashboard',
     exact: true,
     icon: <RemixIcon.RiDashboardLine />,
+    anchor: <FeatherIcon.FiPlay />,
     cName: 'nav-text'
   },
   {
