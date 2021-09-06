@@ -14,12 +14,13 @@ const LeftSideBar = (props) => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <nav className={sidebar ? "nav-menu active col" : "nav-menu col" }>
           <div className="col m-4">
-            <div className="navbar-brand logo-bars" onClick={showSidebar}>
+            <div className="navbar-brand logo-bars col" onClick={showSidebar}>
               <img 
                   src={fudge_logo} 
                   alt="fudge-logo"                             
                   height="25vh"
                   width="80vw"
+                  className="col"
                 >
               </img>
             </div>

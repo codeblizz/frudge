@@ -18,7 +18,7 @@ Built with:
 Please note - Type each command without the double quotes.
 E.g. cd client and NOT "cd client"
 
-Open the fudge project folder and make sure to type this commands on your MAC terminal - "cd client" and click enter, then type "npm install" and enter to install all dependencies and finally type "npm start" and enter to starts the react dev server locally on your machine. This will automatically open your default browser and run the app on http://localhost:3000.  
+Open the fudge project folder and make sure to type this commands on your MAC terminal - "cd client" and click enter, then type "npm install" and enter to install all dependencies and finally type "npm start" and enter to start the react dev server locally on your machine. This will automatically open your default browser and run the app on http://localhost:3000.  
 
 ## Browser Support
 Compatible with every evergreen browser. 
