@@ -2,27 +2,21 @@ import React, { useState, useEffect } from 'react';
 import comment1 from "../Assets/comment1.png";
 import comment2 from "../Assets/comment2.png";
 import comment3 from "../Assets/comment3.png";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getCommentList } from "../Redux/Action/commentAction";
 
 const CommentSection = () => {
-    const [ comment, setComment ] = useState([])
-
-    const fetchCommentData = async () => {
-        try {
-            let res = await axios("https://jsonplaceholder.typicode.com/comments?_limit=1");
-            setComment(res.data);
-        } catch(error) {
-            console.log("error");
-        }
-    };
+    const dispatch = useDispatch();
+    const comment = useSelector(state => state.comment.comment);
+    console.log("comment", comment);
 
     useEffect(() => {
-        fetchCommentData();
+        dispatch(getCommentList());
     }, []);
 
     return (
         <div className="col">
-            {comment.map((c) => (
+            {comment?.map((c) => (
             <div className="list-group col">
                 <b className="mb-1 col">Top Comments</b>
                 <div className="list-group-item col">

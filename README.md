@@ -4,6 +4,7 @@ This is a Create React App as a task for the position of Front-End Developer
 ## Frontend - Client Folder
 Built with:
 - [axios](https://github.com/axios/axios)
+- Redux, Redux thunk
 - [React Hooks] (https://reactjs.org/docs/hooks-intro.html)
 - React 17.* version
 - React Icons

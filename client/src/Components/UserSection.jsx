@@ -2,33 +2,26 @@ import React, { useState, useEffect } from 'react';
 import comment1 from "../Assets/comment1.png";
 import comment2 from "../Assets/comment2.png";
 import comment3 from "../Assets/comment3.png";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import * as BsIcons from "react-icons/bs";
+import { getUserList } from "../Redux/Action/userAction"
 
 const dotIcon = (
     <BsIcons.BsDot className="fw-1 fs-1" style={{color:"#248232"}}/>
 )
 
 const UserSection = () => {
-    const [ user, setUser ] = useState([])
-
-    const fetchUserData = async () => {
-        try {
-            let res = await axios("https://jsonplaceholder.typicode.com/users?_limit=3");
-            setUser(res.data);
-        } catch(error) {
-            console.log("error");
-        }
-    };
+    const dispatch = useDispatch();
+    const user = useSelector(state => state.user.user)
 
     useEffect(() => {
-        fetchUserData();
+        dispatch(getUserList());
     }, []);
 
     return (
         <div className="col m-0">
             <b className="mb-1 col">Users</b>
-            {user.map((user) => (
+            {user?.map((user) => (
             <div className="list-group col">
                 <div className="list-group-item col">
                     <div className="row mb-2">

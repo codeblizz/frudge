@@ -1,21 +1,11 @@
 import { combineReducers } from "redux";
-import successReducer from "./successReducer";
-import errorReducer from "./errorReducer";
-import supportReducer from "./supportReducer";
-import dashboardReducer from "./dashboardReducer";
-import newsfeedReducer from "./newsfeedReducer";
-import advisoryReducer from "./advisoryReducer";
-import menuToggleReducer from "./menuToggleReducer";
-import documentReducer from "./documentReducer";
+import alertReducer from "./alertReducer";
+import commentReducer from "./commentReducer";
+import userReducer from "./userReducer";
 
 const rootReducer = combineReducers({
-  errors: errorReducer,
-  success: successReducer,
-  menu: menuToggleReducer,
-  dashboard: dashboardReducer,
-  support: supportReducer,
-  newsfeed: newsfeedReducer,
-  advisory: advisoryReducer,
-  document: documentReducer
+  comment: commentReducer,
+  alert: alertReducer,
+  user: userReducer
 });
 export default rootReducer;
