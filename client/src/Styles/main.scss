@@ -177,7 +177,12 @@ option {
 
 .goalCard {
   box-shadow: 0 10px 20px $goalCardShadowColor;
-  height: 13.5rem;
+  height: 17.5rem;
+}
+
+.c_progress {
+  color: #333330;
+  background-color: rgba(138, 165, 62, 0)
 }
 
 .statCard {
