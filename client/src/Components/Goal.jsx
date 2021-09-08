@@ -18,15 +18,21 @@ const Goal = () => {
     return (
         <div className="col">
             <b className="col">My Goals</b>
-            <div className="d-flex flex-row row-col-1 p-3">
-                <div class="card-body col-sm-4 goalCard p-2 border border-2 mx-20px">
-                    <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
+            <div className="card-group row g-4">
+                <div className="col p-2">
+                    <div className="card-body goalCard">
+                        <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
+                    </div>
                 </div>
-                <div class="card-body col-sm-4 goalCard p-2 border border-2">
-                    <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
+                <div className="col p-2">
+                    <div className="card-body goalCard">
+                        <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
+                    </div>
                 </div>
-                <div class="card-body col-sm-4 goalCard p-2 border border-2">
-                    <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
+                <div className="col p-2">
+                    <div className="card-body goalCard">
+                        <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -21,8 +21,8 @@ const UserSection = () => {
     return (
         <div className="col m-0">
             <b className="mb-1 col">Users</b>
-            {user?.map((user) => (
-            <div className="form-control container">
+            {user?.map((user, i) => (
+            <div key={i} className="form-control container">
                 <div className="row justify-content-center mb-1 mt-1">
                     <div className="col-4 align-self-center">
                         <img src={comment1} className="ellipse mt-1"/>

@@ -2,10 +2,11 @@ import React from 'react';
 import GridStatistics from './GridStatistics.jsx';
 import GridFinancialHealth from "./GridFinancialHealth.jsx"
 import Goal from './Goal.jsx';
-import PerformanceGraph from './PerformanceGraph.jsx';
+import PerformanceGraph from './PerformanceGraphOld.jsx';
 import IndustryNews from "./IndustryNews.jsx";
 import CommentSection from "./CommentSection.jsx";
 import UserSection from "./UserSection.jsx";
+import PerformanceChart from './PerformanceChart.jsx';
 
 const GridSection = () => {
     return (
@@ -23,7 +24,7 @@ const GridSection = () => {
             <div className="form-control mb-2">
                 <div className="row row-col-2">
                     <div className="col-6">
-                        <PerformanceGraph />
+                        <PerformanceChart />
                     </div>
                     <div className="col-6">
                         <Goal />

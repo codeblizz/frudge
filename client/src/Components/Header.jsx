@@ -21,40 +21,42 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="row justify-content-between">
+        <div className="row justify-content-between mt-0">
             {user.map((user) => (
             <div className="col-7">
                 <div className="d-flex flex-nowrap p-0 row">
                     <div className="col-1 mt-2">
                         <img src={UserImg} className="m-2 ellipse"/>
                     </div>
-                    <p className="d-flex col-5 text-nowrap mt-3 justify-conter-start align-content-center message">
+                    <p className="d-flex col-5 text-nowrap mt-4 justify-conter-start align-content-center message">
                         Welcome, <b className="mx-2">{user.name}</b> Here's your personalized financial dashboard
                     </p>
                 </div>
             </div>))}
-            {/* <div className="col-3 align-self-end mt-1">
-                <div className="row no-padding">
-                    <div className="form-group col g-1 m-0">
-                        <div className="row">
+            <div className="col-3 align-self-end m-0 p-0">
+                <div className="row">
+                    <div className="col">
+                        <div className="form-group row mt-0">
                             <label className="form-label col namespace">Currency</label>
-                            <select className="form-contol currencyOptions col selectHeader p-0 m-0">
+                            <select className="form-select form-control col selectHeader p-0 m-0">
+                                <option value=""></option>
                                 <option value="GBP">GBP</option>
                                 <option value="USD">USD</option>
                                 <option value="AED">AED</option>
                             </select>
                         </div>
                     </div>
-                    <div className="form-group col g-1 m-0 p-0">
-                        <div className="row">
+                    <div className="col mt-0 pt-0">
+                        <div className="form-group row">
                             <label className="form-label col namespace">Account</label>
-                            <select className="form-control currencyOptions col selectHeader p-0 m-0">
+                            <select className="form-select form-control col selectHeader p-0 m-0">
+                                <option value=""></option>
                                 <option value="">Me</option>
                             </select>
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     )
 }

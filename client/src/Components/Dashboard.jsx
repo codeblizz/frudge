@@ -5,7 +5,7 @@ import GridSection from "./GridSection.jsx";
 const Dashboard = (props) => {
     const { sidebar } = props;
     return (
-        <div className={`col border border-0 ${sidebar} ? mainContent : mainContent`}>
+        <div className={`col ${sidebar} ? mainContent : mainContent`}>
             <Header className="col m-0"/>
             <h1 className="fs-5 exception card-title mb-4">Dashboard Home</h1>
             <GridSection className="col"/>

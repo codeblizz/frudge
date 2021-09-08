@@ -29,7 +29,7 @@ span {
 .mainContent {
   height: 100vh;
   width: 80%;
-  box-shadow: #303036;
+  box-shadow: $mainContentShadowColor;
   margin-top: 0;
   float: right;
 }
@@ -89,15 +89,15 @@ div.landingPageBG-true {
   width: 5px;
   height: 25px;
   transition: max-width 5s ease-in-out;
-  max-width: 1400px;
+  max-width: 2000px;
 }
 
 .comtainer-slider {
   display: block;
-  width: 1100px;
+  width: 900px;
   overflow: hidden;
   white-space: nowrap;
-  animation: slide-side 5s forwards;
+  animation: slide-side 5s backwards;
   // transform: rotate(180deg);
   max-width: 2000px;
 }
@@ -122,9 +122,9 @@ div.landingPageBG-true {
 @keyframes slide-side {
   from {
     margin-left: 65%;
-    align-self: center;
+    align-self:stretch;
     // animation-direction: reverse;
-    width: 1100px;
+    width: 600px;
   }
   to {
     margin-left: 110%;
@@ -133,30 +133,61 @@ div.landingPageBG-true {
   }
 }
 
+.canvas-container {
+  height: 60vh;
+}
 
 .namespace {
   font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 .select {
   border-style: hidden;
+  height: 1.2rem;
+  width: 0.1rem;
+  display: flex;
+  align-self:flex-start;
+  padding: 0 0;
+  font-size: 0.1rem;
+  background-color: $navbartextColor;
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+option {
+  font-size: 0.7rem;
+  font-weight: 0.2rem;
+  padding: 0;
+  background-color: $navbartextColor;
+  margin: 0;
+}
+
+.selectHeader {
+  border-style: hidden;
+  height: 1.2rem;
+  width: 0.1rem;
+  display: flex;
+  align-self: flex-start;
+  padding: 0 0;
+  font-size: 0.1rem;
+  background-color: $navbartextColor;
+  margin: 0.5rem 0.5rem 0 0;
 }
 
 .goalCard {
-  width: 22rem;
-  height: 13rem;
+  box-shadow: 0 10px 20px $goalCardShadowColor;
+  height: 13.5rem;
+}
+
+.statCard {
+  box-shadow: 0 10px 20px $goalCardShadowColor;
+  height: 12rem;
 }
 
 .cardDim {
   height: 17.7rem;
-}
-
-.currencyOptions option {
-  font-size: 10px;
-  font-weight: 10px;
-  padding:5px 0;
-  height: 5px;
-  width: 5px;
+  border-style: hidden;
 }
 
 .arrowPos1 {
@@ -334,7 +365,7 @@ h1.exception:after {
   box-shadow: 25rem;
   border-color: linear-gradient(rgb(12, 17, 12), rgba(2, 31, 21, 0));
   border-width: 20px;
-  background-color: #EBEBEB;
+  background-color: $cardStatsColor;
 }
 
 .slabel {
@@ -343,11 +374,6 @@ h1.exception:after {
   font-size: 0.9rem;
   display: flex;
   justify-content: center;
-}
-
-.selectHeader {
-  border: none;
-  width: 5%;
 }
 
 //   .showInfo {
@@ -381,3 +407,4 @@ h1.exception:after {
 //   transition: all 300ms ease-out;
 //   transform: translateY(-5px) scale(1.0);
 // }
+

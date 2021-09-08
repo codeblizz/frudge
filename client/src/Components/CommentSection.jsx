@@ -17,8 +17,8 @@ const CommentSection = () => {
     return (
         <div className="col">
             <b className="mb-1 col">Top Comments</b>
-            {comment?.map((c) => (
-            <div className="form-control container">
+            {comment?.map((c, i) => (
+            <div key={i} className="form-control container">
                 <div className="row justify-content-start mb-1 mt-1">
                     <div className="row mb-2">
                         <div className="col-3">
