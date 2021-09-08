@@ -6,8 +6,8 @@ const LineSlider = () => {
             <div 
                 className="progress-bar bg-success progress-bar-animated" 
                 role="progressbar" 
-                aria-valuenow="90" 
-                aria-valuemin="80" 
+                aria-valuenow="0" 
+                aria-valuemin="0" 
                 aria-valuemax="100"
             >
             </div>

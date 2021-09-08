@@ -97,8 +97,8 @@ div.landingPageBG-true {
   width: 900px;
   overflow: hidden;
   white-space: nowrap;
-  animation: slide-side 5s backwards;
-  // transform: rotate(180deg);
+  animation: slide-side 5s forwards;
+  transform: rotate(180deg);
   max-width: 2000px;
 }
 
@@ -116,20 +116,17 @@ div.landingPageBG-true {
 .progress-bar {
   width: 0%;
   background-color: $landingPageTextColor;
-  transform: rotate(180deg);
 }
 
 @keyframes slide-side {
   from {
     margin-left: 65%;
     align-self:stretch;
-    // animation-direction: reverse;
     width: 600px;
   }
   to {
     margin-left: 110%;
     width: 2000px;
-    // animation-direction: reverse;
   }
 }
 
@@ -143,16 +140,28 @@ div.landingPageBG-true {
   padding: 0;
 }
 
-.select {
+.select-header{
   border-style: hidden;
-  height: 1.2rem;
-  width: 0.1rem;
-  display: flex;
-  align-self:flex-start;
+  position: absolute;
   padding: 0 0;
-  font-size: 0.1rem;
+  border: 0;
+  width: 1.2rem;
+  font-size: 1rem;
   background-color: $navbartextColor;
-  margin: 0.5rem 0.5rem 0 0;
+  margin: 0 0;
+  top: 1.8rem;
+}
+
+.label-currency {
+  top: 1.8rem;
+  right: 10rem;
+  position: absolute;
+}
+
+.label-amount {
+  top: 1.8rem;
+  right: 2.1rem;
+  position: absolute;
 }
 
 option {
@@ -163,17 +172,54 @@ option {
   margin: 0;
 }
 
-.select-header {
-  border-style: hidden;
-  height: 1.2rem;
-  width: 0.1rem;
-  display: flex;
-  align-self: flex-start;
-  padding: 0 0;
-  font-size: 0.1rem;
-  background-color: $navbartextColor;
-  margin: 0.5rem 0.5rem 0 0;
+.custom-select {
+  position: relative;
 }
+
+// .custom-select-arrow {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   height: 100%;
+//   width: 1rem;
+//   display: block;
+//   background-color: red;
+//   pointer-events: none;
+// }
+
+// .custom-arrow::before 
+// .custom-arrow::after {
+//   --size: 1rem;
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   height: 0;
+//   left: 50%;
+
+// }
+
+// .custom-arrow::before {
+//    border-left: var(--size) solid transparent;
+//    border-right: var(--size) solid transparent;
+//    border-bottom: var(--size) solid red;
+// }
+// .custom-arrow::after {
+//    border-left: var(--size) solid transparent;
+//    border-right: var(--size) solid transparent;
+//    border-top: var(--size) solid red;
+// }
+
+// .select-header {
+//   border-style: hidden;
+//   height: 1.2rem;
+//   width: 0.1rem;
+//   display: flex;
+//   align-self: flex-start;
+//   padding: 0 0;
+//   font-size: 0.1rem;
+//   background-color: $navbartextColor;
+//   margin: 0.5rem 0.5rem 0 0;
+// }
 
 .goal-card {
   box-shadow: 0 10px 20px $goalCardShadowColor;

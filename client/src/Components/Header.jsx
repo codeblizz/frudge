@@ -21,7 +21,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="row justify-content-between my-0 mx-0">
+        <div className="row d-flex justify-content-between custom-select my-0 mx-0 py-0 px-0">
             {user.map((user) => (
             <div className="col-7">
                 <div className="d-flex flex-nowrap p-0 row">
@@ -33,12 +33,12 @@ const Header = () => {
                     </p>
                 </div>
             </div>))}
-            <div className="col-3 align-self-end m-0 p-0">
-                <div className="row">
+            <div className="col-3 m-0 p-0">
+                <div className="row mx-0 px-0">
                     <div className="col mt-0 pt-0">
-                        <div className="form-group row">
-                            <label className="form-label col namespace">Currency</label>
-                            <select className="form-select form-control col select-header p-0 m-0">
+                        <div className="d-flex justify-content-end">
+                            <label className="label-currency col mx-0 namespace">Currency</label>
+                            <select className="select-header">
                                 <option value=""></option>
                                 <option value="GBP">GBP</option>
                                 <option value="USD">USD</option>
@@ -47,9 +47,9 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="col mt-0 pt-0">
-                        <div className="form-group row">
-                            <label className="form-label col namespace">Account</label>
-                            <select className="form-select form-control col select-header p-0 m-0">
+                        <div className="d-flex justify-content-end">
+                            <label className="label-amount col mx-0 namespace">Account</label>
+                            <select className="select-header">
                                 <option value=""></option>
                                 <option value="">Me</option>
                             </select>

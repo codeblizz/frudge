@@ -2,7 +2,6 @@ import React from 'react';
 import GridStatistics from './GridStatistics.jsx';
 import GridFinancialHealth from "./GridFinancialHealth.jsx"
 import Goal from './Goal.jsx';
-import PerformanceGraph from './PerformanceGraphOld.jsx';
 import IndustryNews from "./IndustryNews.jsx";
 import CommentSection from "./CommentSection.jsx";
 import UserSection from "./UserSection.jsx";
