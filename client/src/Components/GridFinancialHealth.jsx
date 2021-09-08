@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { Scatter } from "react-chartjs-2";
 import { monthWisePerfomance, months } from "../constants";
+import { statsValues } from "../constants";
 
 const GridFinancialHealth = () => {
     const chartRef = useRef(null);
@@ -34,12 +35,21 @@ const GridFinancialHealth = () => {
 
     return (
         <div className="col">
-            <b className="col">My Financial Health</b>
-            <span className="d-flex p-2 card-stats h-20">
-                <span class="card-body p-2">
-                    <Scatter ref={chartRef} data={data} />
-                </span>
-            </span>
+            <div className="row mb-2">
+                <b className="col-8">My Financial Health</b>
+                <small className="d-flex justify-content-end mx-1 col border bg-goal-pill rounded-pill">View Financial Health</small>
+            </div>
+            <div className="d-flex p-2 card-stats h-20">
+                <div class="card-body">
+                    {/* <Scatter ref={chartRef} data={data} /> */}
+                    <div className="footer-goal">
+                        <hr/>
+                        <div className="row">
+                            <small className="d-flex text-goal justify-content-center col">Yuor financial health status is {" "}<p className="text-success">Good</p></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

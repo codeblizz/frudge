@@ -6,7 +6,7 @@ const PerformanceChart = () => {
     () => [
       {
         label: 'Series 1',
-        data: [[0, 1], [1, 2], [2, 4], [3, 2], [4, 7]]
+        data: [[0, 1], [1, 2], [2, 4], [3, 2], [4, 7]],
       },
       {
         label: 'Series 2',
@@ -24,12 +24,22 @@ const PerformanceChart = () => {
     []
   )
   const options = {
-    maintainAspectRatio: false	// Don't maintain w/h ratio
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [{
+        gridLines: {
+          color: 'green'
+        }
+      }],
+      xAxes: [{
+        gridLines: {
+        color: 'red'
+        }
+      }]
     }
+  }
  
   const lineChart = (
-    // A react-chart hyper-responsively and continuously fills the available
-    // space of its parent element automatically
     <article
         className="canvas-container col"
         style={{
@@ -42,7 +52,13 @@ const PerformanceChart = () => {
   )
   return (
       <div className="col">
-        <b className="col" >My Performance</b>
+        <div className="row mb-4">
+          <b className="d-flex justify-content-start col-7">My Performance</b>
+          <small className="d-flex col-1 justify-content-center border bg-perf-pill rounded-pill">Weekly</small>
+          <small className="d-flex col-1 justify-content-center border bg-perf-pill rounded-pill">Monthly</small>
+          <small className="d-flex col-1 justify-content-center border bg-perf-pill rounded-pill">Yearly</small>
+          <small className="d-flex justify-content-center col-2 border bg-perf-pill rounded-pill">All Time</small>
+        </div>
         {lineChart}
       </div>
   )

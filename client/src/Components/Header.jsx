@@ -21,7 +21,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="row justify-content-between mt-0">
+        <div className="row justify-content-between my-0 mx-0">
             {user.map((user) => (
             <div className="col-7">
                 <div className="d-flex flex-nowrap p-0 row">
@@ -35,10 +35,10 @@ const Header = () => {
             </div>))}
             <div className="col-3 align-self-end m-0 p-0">
                 <div className="row">
-                    <div className="col">
-                        <div className="form-group row mt-0">
+                    <div className="col mt-0 pt-0">
+                        <div className="form-group row">
                             <label className="form-label col namespace">Currency</label>
-                            <select className="form-select form-control col selectHeader p-0 m-0">
+                            <select className="form-select form-control col select-header p-0 m-0">
                                 <option value=""></option>
                                 <option value="GBP">GBP</option>
                                 <option value="USD">USD</option>
@@ -49,7 +49,7 @@ const Header = () => {
                     <div className="col mt-0 pt-0">
                         <div className="form-group row">
                             <label className="form-label col namespace">Account</label>
-                            <select className="form-select form-control col selectHeader p-0 m-0">
+                            <select className="form-select form-control col select-header p-0 m-0">
                                 <option value=""></option>
                                 <option value="">Me</option>
                             </select>

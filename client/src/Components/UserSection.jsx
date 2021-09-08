@@ -27,7 +27,7 @@ const UserSection = () => {
                     <div className="col-4 align-self-center">
                         <img src={comment1} className="ellipse mt-1"/>
                     </div>
-                    <div className="col-7 align-self-start">
+                    <div className="col-8 align-self-start">
                         <small className="col namespace mb-0">{user.name}</small>
                         <div className="w-100"></div>
                         <em className="col-7 namespace">{dotIcon}Online</em>
@@ -37,7 +37,7 @@ const UserSection = () => {
                     <div className="col-4 align-self-center">
                         <img src={comment2} className="ellipse mt-1"/>
                     </div>
-                    <div className="col-7 align-self-start">
+                    <div className="col-8 align-self-start">
                         <small className="col namespace">{user.name}</small>
                         <div className="w-100"></div>
                         <em className="col-7 namespace">{dotIcon}Online</em>
@@ -47,7 +47,7 @@ const UserSection = () => {
                     <div className="col-4 align-self-center">
                         <img src={comment3} className="ellipse mt-1"/>
                     </div>
-                    <div className="col-7 align-self-start">
+                    <div className="col-8 align-self-start">
                         <small className="col namespace">{user.name}</small>
                         <div className="w-100"></div>
                         <em className="col-7 namespace">{dotIcon}Online</em>

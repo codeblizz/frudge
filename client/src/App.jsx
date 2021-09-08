@@ -8,10 +8,10 @@ import {
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage.jsx';
 import Dashboard from "./Components/Dashboard.jsx";
-import AdvisoryPage from "./Components/AdvisorsPage";
-import DocumentPage from "./Components/DocumentPage";
-import NewsFeedPage from "./Components/NewsFeedPage";
-import SupportPage from "./Components/SupportPage";
+import AdvisoryPage from "./Components/AdvisorsPage.jsx";
+import DocumentPage from "./Components/DocumentPage.jsx";
+import NewsFeedPage from "./Components/NewsFeedPage.jsx";
+import SupportPage from "./Components/SupportPage.jsx";
 import LeftSideBar  from "./Components/LeftSideBar";
 
 const MainContent = () => {
@@ -41,17 +41,17 @@ const MainContent = () => {
   }
 
   return (
-    <div className="col appMain">
+    <div className="col app-main">
       { sidebar ?
         ( <div className="row">
-            <LeftSideBar className="col" navClick={navClick}/>
+            <LeftSideBar className="col" navClick={navClick}/> 
             <div className="col">
               <Switch>
                 <Route exact path="/dashboard" render={()=><Dashboard sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
-                <Route exact path="/advisors" render={()=><AdvisoryPage />}/>
-                <Route exact path="/documents" render={()=><DocumentPage />}/>
-                <Route exact path="/feed" render={()=><NewsFeedPage />}/>
-                <Route exact path="/support" render={()=>(<SupportPage />)} />  
+                <Route exact path="/advisors" render={()=><AdvisoryPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
+                <Route exact path="/documents" render={()=><DocumentPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
+                <Route exact path="/feed" render={()=><NewsFeedPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
+                <Route exact path="/support" render={()=><SupportPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>  
               </Switch>
             </div>
           </div> ) : (

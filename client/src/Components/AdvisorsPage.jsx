@@ -2,13 +2,12 @@ import React from "react";
 import Header from "./Header.jsx";
 import GridSection from "./GridSection.jsx";
 
-const AdvisorsPage = () => {
+const AdvisorsPage = (props) => {
+    const { sidebar } = props;
     return (
-        <div className="allParagraph card mainContent">
-            <div className="mb-0"><Header /></div>
-            <div className="allParagraph card-body container-fluid"> 
-                <GridSection />
-            </div>
+        <div className={`${sidebar} ? main-content col : main-content`}>
+            <Header className="col m-0"/>
+            <GridSection className="col"/>
         </div>
     )
 }
