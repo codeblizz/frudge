@@ -86,26 +86,53 @@ div.landingPageBG-true {
 }
 
 .dashSlider {
-  width: 100px;
-  height: 30px;
-  transition: max-width 5s ease-out;
-  max-width: 6900px;
+  width: 5px;
+  height: 25px;
+  transition: max-width 5s ease-in-out;
+  max-width: 1400px;
 }
 
 .comtainer-slider {
   display: block;
-  width: 900px;
+  width: 1100px;
   overflow: hidden;
   white-space: nowrap;
   animation: slide-side 5s forwards;
-  animation-direction: alternate;
-  max-width: 6900px;
+  // transform: rotate(180deg);
+  max-width: 2000px;
 }
 
 .comtainer-slider .comp-slider {
   position: relative;
   display: inline-block;
 }
+
+// @if $enable-transitions {
+//   @keyframes progress-bar-stripes {
+//     0% { background-position-x: $progress-height; }
+//   }
+// }
+
+.progress-bar {
+  width: 0%;
+  background-color: $landingPageTextColor;
+  transform: rotate(180deg);
+}
+
+@keyframes slide-side {
+  from {
+    margin-left: 65%;
+    align-self: center;
+    // animation-direction: reverse;
+    width: 1100px;
+  }
+  to {
+    margin-left: 110%;
+    width: 2000px;
+    // animation-direction: reverse;
+  }
+}
+
 
 .namespace {
   font-size: 12px;
@@ -115,24 +142,21 @@ div.landingPageBG-true {
   border-style: hidden;
 }
 
+.goalCard {
+  width: 22rem;
+  height: 13rem;
+}
+
+.cardDim {
+  height: 17.7rem;
+}
+
 .currencyOptions option {
   font-size: 10px;
   font-weight: 10px;
   padding:5px 0;
   height: 5px;
   width: 5px;
-}
-
-@keyframes slide-side {
-  from {
-    margin-left: 20%;
-    align-self: center;
-    width: 900px;
-  }
-  to {
-    margin-left: 100%;
-    width: 6900px;
-  }
 }
 
 .arrowPos1 {

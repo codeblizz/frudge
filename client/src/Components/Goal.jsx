@@ -16,16 +16,16 @@ const Goal = () => {
     };
 
     return (
-        <div className="allParagraph col w-20">
+        <div className="col">
             <b className="col">My Goals</b>
-            <div className="allParagraph d-flex flex-row row-col-1 p-3">
-                <div class="card-body col w-45 p-2 border border-2 mx-20px">
+            <div className="d-flex flex-row row-col-1 p-3">
+                <div class="card-body col-sm-4 goalCard p-2 border border-2 mx-20px">
                     <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
                 </div>
-                <div class="card-body col w-27 p-2 border border-2">
+                <div class="card-body col-sm-4 goalCard p-2 border border-2">
                     <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
                 </div>
-                <div class="card-body col w-27 p-2 border border-2">
+                <div class="card-body col-sm-4 goalCard p-2 border border-2">
                     <Pie width="10px" ref={chartRef} data={pieData} datasetKeyProvider={datasetKeyProvider} />
                 </div>
             </div>

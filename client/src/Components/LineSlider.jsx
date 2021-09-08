@@ -1,9 +1,18 @@
 import React from 'react'
-import * as DashSlider from "react-icons/go";
 
 const LineSlider = () => {
     return (
-        <DashSlider.GoDash className="dashSlider"/>
+        <div className="progress" style={{height: "5px"}}>
+            <div 
+                className="progress-bar bg-success progress-bar-animated" 
+                role="progressbar" 
+                aria-valuenow="90" 
+                aria-valuemin="80" 
+                aria-valuemax="100"
+            >
+            </div>
+        </div>
+
     )
 }
 export default LineSlider;
