@@ -11,7 +11,9 @@ export const MenuNames = [
     exact: true,
     icon: <RemixIcon.RiDashboardLine />,
     anchor: <FeatherIcon.FiPlay />,
-    cName: 'nav-text'
+    cText: 'nav-text',
+    cItem: "nav-item"
+
   },
   {
     id: 137,
@@ -19,7 +21,8 @@ export const MenuNames = [
     path: '/advisors',
     exact: true,
     icon: <BootstrapIcon.BsPersonCheck />,
-    cName: 'nav-text'
+    cText: 'nav-text',
+    cItem: "nav-item"
   },
   {
     id: 1157,
@@ -27,7 +30,8 @@ export const MenuNames = [
     path: '/documents',
     exact: true,
     icon: <IonicIcon.IoDocumentTextOutline />,
-    cName: 'nav-text'
+    cText: 'nav-text',
+    cItem: "nav-item"
   },
   {
     id: 1219,
@@ -35,7 +39,8 @@ export const MenuNames = [
     path: '/feed',
     exact: true,
     icon: <RemixIcon.RiWirelessChargingFill />,
-    cName: 'nav-text'
+    cText: 'nav-text',
+    cItem: "nav-item"
   },
   {
     id: 1693,
@@ -43,6 +48,7 @@ export const MenuNames = [
     path: '/support',
     exact: true,
     icon: <FeatherIcon.FiPhone />,
-    cName: 'nav-text'
+    cText: 'nav-text',
+    cItem: "nav-item"
   }
 ];

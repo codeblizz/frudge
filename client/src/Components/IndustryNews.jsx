@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
 // import get from "../hookHelper";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getNewsFeed } from "../Redux/Action/newsFeedAction";
+
 
 const IndustryNews = () => {
-    const [ newsFeed, setNewsFeed ] = useState([]);
+    const dispatch = useDispatch();
+    const newsFeed = useSelector(state => state.news.feed);
 
     const fetchNewsFeed = async () => {
-        try {
-            let res = await axios("https://jsonplaceholder.typicode.com/posts?_limit=2")
-            setNewsFeed(res.data);
-        } catch(err) {
-            console.log("error");
-        }
+        dispatch(getNewsFeed());
     };
 
     useEffect(() => {

@@ -7,39 +7,34 @@ import fudge_logo from "../Assets/fudge_logo.png";
 
 const LeftSideBar = (props) => {
   const { sidebar, showSidebar, navClick } = props;
-  
 
   return (
     <div className="col-sm-12">
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <nav className={sidebar ? "nav-menu active col" : "nav-menu col" }>
-          <div className="col m-4">
-            <div className="navbar-brand logo-bars col" onClick={showSidebar}>
-              <img 
-                  src={fudge_logo} 
-                  alt="fudge-logo"                             
-                  height="25vh"
-                  width="80vw"
-                  className="col"
-                >
-              </img>
-            </div>
+       <IconContext.Provider value={{ color: "#fff" }}>
+        <nav className={sidebar ? "nav-menu active col" : "nav-menu col"}>
+          <ul className="nav-menu-items col">
+            <li className="navbar-logo col" onClick={showSidebar}>
+              <Link to="#" className="logo-bars">
+                <img 
+                    src={fudge_logo} 
+                    alt="fudge-logo"                             
+                    height="25vh"
+                    width="80vw"
+                />
+              </Link>
+            </li>
             {MenuNames.map((item, index) => {
               return (
-                <div className="nav-menu-items col">
-                  <ul key={index} className={`${item.cName} navbar-nav row`}>
-                    <li className="nav-items col" >
-                      <Link to="#" className="col" onClick={(e) => navClick(e, item)}>
-                        <span className="nav-text col">{item.icon}</span>
-                        <span className="nav-text col">{item.title}</span>
-                        <span className="nav-text col">{item.anchor}</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <li key={index} className={`${item.cText} row`}>
+                  <Link to="#" className={`${item.cText} col`} onClick={(e) => navClick(e, item)}>
+                    <span className="col">{item.icon}</span>
+                    <span className="col">{item.title}</span>
+                    <span className="p-0 col">{item.anchor}</span>
+                  </Link>
+                </li>
               );
             })}
-          </div>
+          </ul>
         </nav>
       </IconContext.Provider>
     </div>

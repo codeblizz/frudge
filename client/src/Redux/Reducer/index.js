@@ -2,10 +2,12 @@ import { combineReducers } from "redux";
 import alertReducer from "./alertReducer";
 import commentReducer from "./commentReducer";
 import userReducer from "./userReducer";
+import newsFeedReducer from "./newsFeedReducer";
 
 const rootReducer = combineReducers({
-  comment: commentReducer,
+  top: commentReducer,
   alert: alertReducer,
-  user: userReducer
+  fudge: userReducer,
+  news: newsFeedReducer
 });
 export default rootReducer;

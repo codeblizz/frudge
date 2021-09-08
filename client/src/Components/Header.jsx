@@ -21,35 +21,41 @@ const Header = () => {
     }, []);
 
     return (
-            <div className="col">
-                {user.map((user) => (
-                <div className="col-sm-8">
-                    <div className="d-flex flex-nowrap p-0 row">
-                        <div className="col-1 mt-2">
-                            <img src={UserImg} className="m-2 ellipse"/>
-                        </div>
-                        <p className="d-flex col-5 text-nowrap mt-3 justify-conter-start align-content-center message">
-                            Welcome, <b className="mx-2">{user.name}</b> Here's your personalized financial dashboard
-                        </p>
+        <div className="row justify-content-between">
+            {user.map((user) => (
+            <div className="col-7">
+                <div className="d-flex flex-nowrap p-0 row">
+                    <div className="col-1 mt-2">
+                        <img src={UserImg} className="m-2 ellipse"/>
                     </div>
-                </div>))}
-                {/* <div className="col-sm-4 mt-2">
-                    <div className="row no-padding">
-                        <div className="form-group g-1 m-0">
-                            <label className="form-label col">Currency</label>
-                            <select className="form-select form-select-sm col selectHeader p-0 m-0">
+                    <p className="d-flex col-5 text-nowrap mt-3 justify-conter-start align-content-center message">
+                        Welcome, <b className="mx-2">{user.name}</b> Here's your personalized financial dashboard
+                    </p>
+                </div>
+            </div>))}
+            {/* <div className="col-3 align-self-end mt-1">
+                <div className="row no-padding">
+                    <div className="form-group col g-1 m-0">
+                        <div className="row">
+                            <label className="form-label col namespace">Currency</label>
+                            <select className="form-contol currencyOptions col selectHeader p-0 m-0">
                                 <option value="GBP">GBP</option>
                                 <option value="USD">USD</option>
                                 <option value="AED">AED</option>
                             </select>
-                            <label className="form-label col">My Account</label>
-                            <select className="form-select form-select-sm col selectHeader p-0 m-0">
+                        </div>
+                    </div>
+                    <div className="form-group col g-1 m-0 p-0">
+                        <div className="row">
+                            <label className="form-label col namespace">Account</label>
+                            <select className="form-control currencyOptions col selectHeader p-0 m-0">
                                 <option value="">Me</option>
                             </select>
                         </div>
                     </div>
-                </div> */}
-            </div>
+                </div>
+            </div> */}
+        </div>
     )
 }
 export default Header;

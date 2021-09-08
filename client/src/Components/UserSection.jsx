@@ -12,7 +12,7 @@ const dotIcon = (
 
 const UserSection = () => {
     const dispatch = useDispatch();
-    const user = useSelector(state => state.user.user)
+    const user = useSelector(state => state.fudge.user)
 
     useEffect(() => {
         dispatch(getUserList());
@@ -22,38 +22,35 @@ const UserSection = () => {
         <div className="col m-0">
             <b className="mb-1 col">Users</b>
             {user?.map((user) => (
-            <div className="list-group col">
-                <div className="list-group-item col">
-                    <div className="row mb-2">
-                        <div className="col">
-                            <img src={comment1} className="ellipse mt-2"/>
-                        </div>
-                        <div className="col">
-                            <small className="row">{user.name}</small>
-                            {/* <small className="row">{dotIcon} Online</small> */}
-                        </div>
+            <div className="form-control container">
+                <div className="row justify-content-center mb-1 mt-1">
+                    <div className="col-4 align-self-center">
+                        <img src={comment1} className="ellipse mt-1"/>
+                    </div>
+                    <div className="col-7 align-self-start">
+                        <small className="col namespace mb-0">{user.name}</small>
+                        <div className="w-100"></div>
+                        <em className="col-7 namespace">{dotIcon}Online</em>
                     </div>
                 </div>
-                <div className="list-group-item col">
-                    <div className="row row-col-2 mb-2">
-                        <div className="col">
-                            <img src={comment2} className="ellipse mt-2"/>
-                        </div>
-                        <div className="col">
-                            <small className="row">{user.name}</small>
-                            {/* <small className="row">{dotIcon} Online</small> */}
-                        </div>
+                <div className="row justify-content-center mb-1 mt-1">
+                    <div className="col-4 align-self-center">
+                        <img src={comment2} className="ellipse mt-1"/>
+                    </div>
+                    <div className="col-7 align-self-start">
+                        <small className="col namespace">{user.name}</small>
+                        <div className="w-100"></div>
+                        <em className="col-7 namespace">{dotIcon}Online</em>
                     </div>
                 </div>
-                <div className="list-group-item col">
-                    <div className="row row-col-2 mb-2">
-                        <div className="col">
-                            <img src={comment3} className="ellipse mt-2"/>
-                        </div>
-                        <div className="col">
-                            <small className="row">{user.name}</small>
-                            {/* <small className="row">{dotIcon} Online</small> */}
-                        </div>
+                <div className="row justify-content-center mb-2 mt-2">
+                    <div className="col-4 align-self-center">
+                        <img src={comment3} className="ellipse mt-1"/>
+                    </div>
+                    <div className="col-7 align-self-start">
+                        <small className="col namespace">{user.name}</small>
+                        <div className="w-100"></div>
+                        <em className="col-7 namespace">{dotIcon}Online</em>
                     </div>
                 </div>
             </div>

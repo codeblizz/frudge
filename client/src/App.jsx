@@ -57,7 +57,7 @@ const MainContent = () => {
           </div> ) : (
           <div className="col">
             <Switch>
-              <Route exact path="/dashboard" render={()=><Dashboard sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
+              <Route exact path="/dashboard" render={()=><Dashboard />}/>
               <Route exact path="/advisors" render={()=><AdvisoryPage />}/>
               <Route exact path="/documents" render={()=><DocumentPage />}/>
               <Route exact path="/feed" render={()=><NewsFeedPage />}/>

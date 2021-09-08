@@ -1,12 +1,12 @@
-import { SHOW_USER_LIST, SHOW_ERRORS, SHOW_SUCCESS, SET_LOADING, CLEAR_LOADING, CLEAR_ERRORS } from "./types";
+import { SHOW_NEWS_FEED, SHOW_ERRORS, SET_LOADING, CLEAR_LOADING, CLEAR_ERRORS } from "./types";
 import axios from "axios";
 
-export const getUserList = () => async dispatch => {
+export const getNewsFeed = () => async dispatch => {
     dispatch({ type: CLEAR_ERRORS });
     dispatch({ type: SET_LOADING });
     let res;
     try {
-        res = await axios(`https://jsonplaceholder.typicode.com/users?_limit=2`);
+        res = await axios("https://jsonplaceholder.typicode.com/posts?_limit=2");
     } catch(error) {
         dispatch({ type: CLEAR_LOADING });
         dispatch({ 
@@ -17,7 +17,7 @@ export const getUserList = () => async dispatch => {
     }
     dispatch({ type: CLEAR_LOADING });
     dispatch({ 
-        type: SHOW_USER_LIST, 
-        user: res?.data,
+        type: SHOW_NEWS_FEED, 
+        feed: res?.data,
     });
 }
