@@ -186,14 +186,26 @@ option {
 }
 
 .bg-goal-pill {
-  background-color: #C5CBD3;
+  background-color: $goalPillBGColor;
   font-size: 0.8rem;
   width: fit-content;
   height: fit-content;
 }
 
+.health-goal {
+  font-size: 0.45rem;
+  display: flex;
+  align-items: center;
+}
+
+.good-health {
+  margin-left: 2px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .bg-perf-pill {
-  background-color: #C5CBD3;
+  background-color: $performancePillBGColor;
   font-size: 0.6rem;
   width: fit-content;
   height: fit-content;
@@ -201,11 +213,11 @@ option {
 
 .stat-card {
   box-shadow: 0 10px 20px $goalCardShadowColor;
-  height: 10rem;
+  height: 6rem;
 }
 
 .card-dim {
-  height: 12.7rem;
+  height: 9.7rem;
   border-style: hidden;
 }
 
@@ -391,9 +403,10 @@ h1.exception:after {
 
 .card-stats {
   box-shadow: 25rem;
+  height: 6rem;
   border-color: linear-gradient(rgb(12, 17, 12), rgba(2, 31, 21, 0));
   border-width: 20px;
-  background-color: $cardStatsColor;
+  background-color: $navbartextColor;
 }
 
 .slabel {
