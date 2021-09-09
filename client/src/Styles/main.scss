@@ -85,27 +85,89 @@ div.landingPageBG-true {
   font-weight: lighter;
 }
 
-.dash-slider {
-  width: 5px;
-  height: 25px;
-  transition: max-width 5s ease-in-out;
-  max-width: 2000px;
-}
+// .dash-slider {
+//   width: 5px;
+//   height: 25px;
+//   transition: max-width 5s ease-in-out;
+//   max-width: 2000px;
+// }
 
 .comtainer-slider {
-  display: block;
-  width: 900px;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: slide-side 5s forwards;
-  transform: rotate(180deg);
-  max-width: 2000px;
+  position: absolute;
+  width: 20px;
+  left: 50%;
+  animation: slide-side 5s linear alternate;
+}
+
+.comp-slider {
+  width: 5px;
+  height: 25px;
 }
 
 .comtainer-slider .comp-slider {
-  position: relative;
-  display: inline-block;
+  transform: translateX(0) translateX(100);
 }
+
+// @keyframes slide-side {
+//   0% {
+//     margin-left: 20%;
+//     width: 15px;
+//     transform: translateX(2%);
+//     background-position-x: 0% 0%;
+//   }
+//   50% {
+//     margin-left: 100%;
+//     width: 5000px;
+//     transform: translateX(100%);
+//     background-position-x: 100% 100%;
+//   }
+//   100% {
+//     margin-left: 20%;
+//     width: 15px;
+//     transform: translateY(100%);
+//     background-position-y: 0% 0%;
+//   }
+// }
+
+@keyframes slide-side {
+  0% {
+    margin-left: 0;
+    width: 10px;
+    transform: translateX(2%);
+    // background-position-x: 0% 0%;
+  }
+  50% {
+    margin-left: 100%;
+    width: 1000px;
+    transform: translateX(100%);
+    // background-position-x: 100% 100%;
+  }
+  // 100% {
+  //   margin-right: 100%;
+  //   width: 10000px;
+  //   transform: translateX(-100%);
+  //   // background-position-y: 0% 0%;
+  // }
+}
+
+// .landingPageBG-true .comtainer-slider .comp-slider {
+//   display: inline-block;
+//   animation: progress-up 3s linear alternate;
+// }
+
+// @keyframes progress-up {
+//   0% {
+//     transform: translateX(40%) translateY(40%);
+//   }
+//   60% {
+//     transform: translateX(60%) translateY(60%);
+//     background-position-y: 50%, 50%;
+//   }
+//   100% {
+//     transform: translateX(100%) translateY(100%);
+//     background-position-y: 50%, 50%;
+//   }
+// }
 
 // @if $enable-transitions {
 //   @keyframes progress-bar-stripes {
@@ -113,21 +175,14 @@ div.landingPageBG-true {
 //   }
 // }
 
+.c_progress {
+  color: #333330;
+  background-color: rgba(138, 165, 62, 0)
+}
+
 .progress-bar {
   width: 0%;
   background-color: $landingPageTextColor;
-}
-
-@keyframes slide-side {
-  from {
-    margin-left: 65%;
-    align-self:stretch;
-    width: 600px;
-  }
-  to {
-    margin-left: 110%;
-    width: 2000px;
-  }
 }
 
 .canvas-container {
@@ -224,11 +279,6 @@ option {
 .goal-card {
   box-shadow: 0 10px 20px $goalCardShadowColor;
   height: 17.5rem;
-}
-
-.c_progress {
-  color: #333330;
-  background-color: rgba(138, 165, 62, 0)
 }
 
 .bg-goal-pill {

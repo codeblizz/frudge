@@ -30,7 +30,7 @@ const UserSection = () => {
                     <div className="col-8 align-self-start">
                         <small className="col namespace mb-0">{user.name}</small>
                         <div className="w-100"></div>
-                        <em className="col-7 namespace">{dotIcon}Online</em>
+                        <em className="col-12 namespace">{dotIcon}Online</em>
                     </div>
                 </div>
                 <div className="row justify-content-center mb-1 mt-1">
@@ -40,7 +40,7 @@ const UserSection = () => {
                     <div className="col-8 align-self-start">
                         <small className="col namespace">{user.name}</small>
                         <div className="w-100"></div>
-                        <em className="col-7 namespace">{dotIcon}Online</em>
+                        <em className="col-12 namespace">{dotIcon}Online</em>
                     </div>
                 </div>
                 <div className="row justify-content-center mb-2 mt-2">
@@ -50,7 +50,7 @@ const UserSection = () => {
                     <div className="col-8 align-self-start">
                         <small className="col namespace">{user.name}</small>
                         <div className="w-100"></div>
-                        <em className="col-7 namespace">{dotIcon}Online</em>
+                        <em className="col-12 namespace">{dotIcon}Online</em>
                     </div>
                 </div>
             </div>
