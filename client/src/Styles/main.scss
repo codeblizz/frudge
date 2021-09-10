@@ -1,14 +1,5 @@
 @import "_variables.scss";
 
-// @media (orientation: landscape) {
-//   small .bg-goal-pill{
-//     background-color: red;
-//     width: 10%;
-//     height: 01%;
-//     font-size: 0.1rem;
-//   }
-// }
-
 html {
     font-family: "Helvetica Neue";
     -ms-text-size-adjust: 100%;
@@ -500,7 +491,7 @@ div.showInfo div.fudgeLogo  p h1 div.bthInfo button {
 h1.exception {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: 10px 20px;
 }
 h1.exception:after{
   content: "";
@@ -569,3 +560,14 @@ h1.exception:after {
 //   transform: translateY(-5px) scale(1.0);
 // }
 
+@media (min-width: 1276) {
+  // body div.app-main {
+  //   margin: 0;
+  //   width: 50%;
+  // }
+  small .bg-perf-pill {
+    font-size: 0.2rem;
+    width: 124px;
+    height: 16px;
+  }
+}
