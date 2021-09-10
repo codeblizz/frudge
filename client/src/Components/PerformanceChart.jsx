@@ -34,7 +34,7 @@ const PerformanceChart = () => {
   return (
       <div className="col">
         <div className="row mb-4">
-          <b className="d-flex justify-content-start col-7">My Performance</b>
+          <b className="d-flex justify-content-start col-6">My Performance</b>
           <small className="d-flex col-1 justify-content-center border bg-perf-pill rounded-pill">Weekly</small>
           <small className="d-flex col-1 justify-content-center border bg-perf-pill rounded-pill">Monthly</small>
           <small className="d-flex col-1 justify-content-center border bg-perf-pill rounded-pill">Yearly</small>
