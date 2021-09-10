@@ -31,7 +31,7 @@ const LandingPage = () => {
         <div className={`before-${show}`}>
         <div className={`d-flex flex-column justify-content-center landingPageBG-${show}`}>
             <span className="arrowPos1"></span>
-            {timeFrame && <div className="comtainer-slider"> <LineSlider className="comp-slider"/></div>}
+            {timeFrame && <div className="comtainer-slider"> <LineSlider /></div>}
             <div className="d-flex align-items-center justify-content-center arrowPos2">
                 <div className="d-flex flex-column mt-1">
                     <div className="d-flex justify-content-center fudgeLogo mb-4">
