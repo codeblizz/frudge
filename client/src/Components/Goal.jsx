@@ -22,6 +22,7 @@ const Goal = () => {
                             width="10px" 
                             value={percentage1} 
                             text={`${percentage1}%`} 
+                            strokeWidth={3}
                             className="c_progress mb-6"
                             styles={buildStyles({ 
                                 pathColor: `rgba(138, 165, 62, ${percentage1 / 100})`,
@@ -45,6 +46,7 @@ const Goal = () => {
                             width="10px" 
                             value={percentage2} 
                             text={`${percentage2}%`} 
+                            strokeWidth={3}
                             className="c_progress"
                             styles={buildStyles({ 
                                 pathColor: `rgba(138, 165, 62, ${percentage2 / 100})`,
@@ -68,6 +70,7 @@ const Goal = () => {
                             width="10px" 
                             value={percentage3} 
                             text={`${percentage3}%`} 
+                            strokeWidth={3}
                             className="c_progress"
                             styles={buildStyles({ 
                                 pathColor: `rgba(138, 165, 62, ${percentage3 / 100})`,

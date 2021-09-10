@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import get from "../hookHelper";
 import { useDispatch, useSelector } from "react-redux";
 import { getNewsFeed } from "../Redux/Action/newsFeedAction";
 
@@ -19,7 +18,7 @@ const IndustryNews = () => {
     return (
         <div className="col">
         <b className="col">Industry News</b>
-        {newsFeed.map((feed, i) => (
+        {newsFeed?.map((feed, i) => (
             <div key={i} className="list-group">
                 <a href="#" className="list-group-item list-group-item-action">
                     <div className="d-flex w-100 justify-content-between">

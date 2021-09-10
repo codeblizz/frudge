@@ -6,14 +6,15 @@ import { IconContext } from 'react-icons';
 import fudge_logo from "../Assets/fudge_logo.png";
 
 const LeftSideBar = (props) => {
-  const { sidebar, showSidebar, navClick } = props;
+  const { navClick, dimensions } = props;
 
+  console.log("dimensions", dimensions);
   return (
     <div className="col-sm-12">
        <IconContext.Provider value={{ color: "#fff" }}>
-        <nav className={sidebar ? "nav-menu active col" : "nav-menu col"}>
+        <nav className={"nav-menu col"}>
           <ul className="nav-menu-items col">
-            <li className="navbar-logo col" onClick={showSidebar}>
+            <li className="navbar-logo col">
               <Link to="#" className="logo-bars">
                 <img 
                     src={fudge_logo} 

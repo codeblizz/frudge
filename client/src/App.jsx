@@ -13,24 +13,36 @@ import DocumentPage from "./Components/DocumentPage.jsx";
 import NewsFeedPage from "./Components/NewsFeedPage.jsx";
 import SupportPage from "./Components/SupportPage.jsx";
 import LeftSideBar  from "./Components/LeftSideBar";
+import { useMediaQueryHook, deviceHeight, deviceWidth } from "./hookHelper";
 
 const MainContent = () => {
-  const [ sidebar, setSidebar ] = useState(true);
   const history = useHistory();
+  const [dimensions, setDimensions] = useState({ 
+    height: deviceHeight,
+    width: deviceWidth
+  })
 
-  const showSidebar = () => {
-    let winWidth = window.innerWidth;
-    let visualViewport = window.visualViewport.width;
-    if( visualViewport < winWidth ) {
-      setSidebar(!sidebar);
-    }
+  const debounce = (fn, ms) => {
+    let timer
+    return _ => {
+      clearTimeout(timer)
+      timer = setTimeout(_ => {
+        timer = null
+        fn.apply(this)
+      }, ms)
+    };
   }
 
   useEffect(() => {
-    showSidebar();
-  }, []) 
-
-  console.log("visualViewport", window.visualViewport);
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        height: deviceHeight,
+        width: deviceWidth
+      })
+    }, 1000)
+    window.addEventListener('resize', debouncedHandleResize);
+    return _ => window.removeEventListener('resize', debouncedHandleResize);
+  }) 
 
   const navClick = (e, item) => {
     if(item){
@@ -40,31 +52,30 @@ const MainContent = () => {
     }
   }
 
+  console.log("dimensions", dimensions.width);
+
   return (
     <div className="col app-main">
-      { sidebar ?
-        ( <div className="row">
-            <LeftSideBar className="col" navClick={navClick}/> 
-            <div className="col">
-              <Switch>
-                <Route exact path="/dashboard" render={()=><Dashboard sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
-                <Route exact path="/advisors" render={()=><AdvisoryPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
-                <Route exact path="/documents" render={()=><DocumentPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
-                <Route exact path="/feed" render={()=><NewsFeedPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>
-                <Route exact path="/support" render={()=><SupportPage sidebar={sidebar} showSidebar={showSidebar} navClick={navClick}/>}/>  
-              </Switch>
-            </div>
-          </div> ) : (
-          <div className="col">
-            <Switch>
-              <Route exact path="/dashboard" render={()=><Dashboard />}/>
-              <Route exact path="/advisors" render={()=><AdvisoryPage />}/>
-              <Route exact path="/documents" render={()=><DocumentPage />}/>
-              <Route exact path="/feed" render={()=><NewsFeedPage />}/>
-              <Route exact path="/support" render={()=>(<SupportPage />)} />  
-            </Switch>
-          </div>
-        )}
+      <div className="row">
+        <LeftSideBar 
+          className={`col 
+            ${dimensions.width >= 1400 ? "dimensions1" : 
+            dimensions.width >= 1400 ? "dimensions2" :
+            dimensions.width >= 1400 ? "dimensions3" :
+            dimensions.width >= 1400 ? "dimensions4" : 
+            "dimensions5" }`} 
+          navClick={navClick}
+        /> 
+        <div className="col">
+          <Switch>
+            <Route exact path="/dashboard" render={()=><Dashboard navClick={navClick}/>}/>
+            <Route exact path="/advisors" render={()=><AdvisoryPage navClick={navClick}/>}/>
+            <Route exact path="/documents" render={()=><DocumentPage navClick={navClick}/>}/>
+            <Route exact path="/feed" render={()=><NewsFeedPage navClick={navClick}/>}/>
+            <Route exact path="/support" render={()=><SupportPage navClick={navClick}/>}/>  
+          </Switch>
+        </div>
+      </div> 
     </div>
   )
 }

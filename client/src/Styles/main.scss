@@ -298,9 +298,9 @@ option {
 
 .bg-goal-pill {
   background-color: $goalPillBGColor;
-  font-size: 0.8rem;
-  width: fit-content;
-  height: fit-content;
+  font-size: 0.6rem;
+  width: 150px;
+  height: 16px;
 }
 
 .health-goal {
@@ -318,8 +318,8 @@ option {
 .bg-perf-pill {
   background-color: $performancePillBGColor;
   font-size: 0.6rem;
-  width: fit-content;
-  height: fit-content;
+  width: 150px;
+  height: 16px;
 }
 
 .stat-card {
@@ -528,6 +528,22 @@ h1.exception:after {
   justify-content: center;
 }
 
+.dimensions1 .dimensions2{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.dimensions3 .dimensions4 {
+  height: 100vh;
+  width: 50%;
+}
+
+.dimensions5 {
+  height: 0;
+  width: 0%;
+}
+
 //   .showInfo {
 //     opacity: 1;
 //     transition: all 300ms ease-out;
@@ -559,15 +575,3 @@ h1.exception:after {
 //   transition: all 300ms ease-out;
 //   transform: translateY(-5px) scale(1.0);
 // }
-
-@media (min-width: 1276) {
-  // body div.app-main {
-  //   margin: 0;
-  //   width: 50%;
-  // }
-  small .bg-perf-pill {
-    font-size: 0.2rem;
-    width: 124px;
-    height: 16px;
-  }
-}

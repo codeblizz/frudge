@@ -8,7 +8,6 @@ import { getCommentList } from "../Redux/Action/commentAction";
 const CommentSection = () => {
     const dispatch = useDispatch();
     const comment = useSelector(state => state.top.comment);
-    console.log("comment", comment);
 
     useEffect(() => {
         dispatch(getCommentList());
