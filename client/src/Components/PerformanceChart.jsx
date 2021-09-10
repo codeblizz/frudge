@@ -4,28 +4,32 @@ import { Line, Doughnut, Bubble, PolarArea, Radar, Scatter } from 'react-chartjs
 const PerformanceChart = () => {
   const ref = useRef();
   const data = {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
         datasets: [
           {
             label: "Expenses",
-            data: [3, 2, 2, 1, 5, 3],
+            data: [3, 2, 2, 1, 5, 3, 7],
             fill: true,
-            borderColor: ["rgb(241, 221, 229)"],
+            borderColor: ["rgb(245, 202, 211)"],
             backgroundColor: ["rgb(241, 221, 229)"],
-            // pointBackgroundColor: ["rgb(255, 3, 6, 9)"],
-            // pointBorderColor: ["rgb(255, 3, 6, 9)"]
           },
           {
             label: "Networth",
-            data: [2, 3, 1, 2, 3, 7],
+            data: [2, 3, 1, 2, 3, 7, 1],
             fill: true,
-            borderColor: ["rgb(221, 234, 241)"],
+            borderColor: ["rgb(205, 213, 245)"],
             backgroundColor: ["rgb(221, 234, 241)"]
-            // pointBackgroundColor: ["rgb(255, 2, 1, 8)"],
-            // pointBorderColor: ["rgb(255, 3, 6, 9)"]
           }
         ],
     }
+  const options = {
+    maintainAspectRatio: false, 	
+    elements: {
+      line: {
+        tension: 0.48 
+      }
+    }
+  }
 
   return (
       <div className="col">
@@ -36,8 +40,8 @@ const PerformanceChart = () => {
           <small className="d-flex col-1 justify-content-center border bg-perf-pill rounded-pill">Yearly</small>
           <small className="d-flex justify-content-center col-2 border bg-perf-pill rounded-pill">All Time</small>
         </div>
-        <article className="canvas-container">
-          <Line ref={ref} data={data} options={{ maintainAspectRatio: false }}/>
+        <article className="row canvas-container">
+          <Line ref={ref} data={data} options={options}/>
         </article>
       </div>
   )

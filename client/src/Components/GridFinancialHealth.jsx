@@ -7,7 +7,7 @@ const GridFinancialHealth = () => {
                 <b className="col-8">My Financial Health</b>
                 <small className="d-flex justify-content-end mx-1 col bg-goal-pill border rounded-pill">View Financial Health</small>
             </div>
-            <div className="d-flex p-2 card-stats row justify-content-center align-item-end">
+            <div className="d-flex p-2 card-stats col justify-content-center align-item-end">
                 <div className="card-body col">
                     <div className="row">
                         <div className="progress" style={{height: "5px"}}>
@@ -21,7 +21,7 @@ const GridFinancialHealth = () => {
                             <small className="d-flex col justify-content-end text-success text-goal">GOOD</small>
                         </span>
                     </div>
-                    <div className="footer-goal row">
+                    <div className="footer-goal row mt-4">
                         <hr/>
                         <div className="col">
                             <small className="health-goal col">Yuor financial health status is 
