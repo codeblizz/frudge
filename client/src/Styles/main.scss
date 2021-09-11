@@ -98,10 +98,10 @@ div.landingPageBG-true {
 //   left: 50%;
 // }
 
-.landingPageBG-true .comtainer-slider {
+.comtainer-slider {
   position: absolute;
   left: 50%;
-  width: 10px;
+  width: 50px;
   height: 25px;
   animation: slide-side 5s linear alternate;
 }
@@ -121,7 +121,6 @@ div.landingPageBG-true {
 .comp-slider {
   width: 100%;
   height: 100%;
-  color: rgb(205, 213, 245);
 }
 
 // @keyframes slide-side {
@@ -318,7 +317,7 @@ option {
 .bg-perf-pill {
   background-color: $performancePillBGColor;
   font-size: 0.6rem;
-  width: 80px;
+  width: 60px;
   height: 16px;
 }
 
@@ -333,7 +332,7 @@ option {
 }
 
 .footer-goal {
-  // margin: 4.5rem 0 0 0;
+  margin: 4.5rem 0 0 0;
 }
 
 .text-goal {
