@@ -57,14 +57,7 @@ const MainContent = () => {
   return (
     <div className="col app-main">
       <div className="row">
-        <LeftSideBar 
-          className={`col 
-            ${dimensions.width >= 1400 ? "dimensions1" : 
-            dimensions.width >= 1400 ? "dimensions2" :
-            dimensions.width >= 1400 ? "dimensions3" :
-            dimensions.width >= 1400 ? "dimensions4" : 
-            "dimensions5" }`} 
-          navClick={navClick}
+        <LeftSideBar className="col" dimensions={dimensions} navClick={navClick}
         /> 
         <div className="col">
           <Switch>

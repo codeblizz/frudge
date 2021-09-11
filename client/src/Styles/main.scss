@@ -92,106 +92,44 @@ div.landingPageBG-true {
 //   max-width: 2000px;
 // }
 
-// .progress .progress-bar {
-//   position: absolute;
-//   width: 20px;
-//   left: 50%;
-// }
-
 .comtainer-slider {
   position: absolute;
-  left: 50%;
+  left: 20%;
   width: 50px;
   height: 25px;
-  animation: slide-side 5s linear alternate;
+  animation: slide-side 5s linear both alternate;  
 }
 
-
-
-// .c_progress {
-//   color: #333330;
-//   background-color: rgba(138, 165, 62, 0)
-// }
+$comtainer-slider-height: 25px;
 
 .progress-bar {
   width: 0%;
   background-color: $landingPageTextColor;
 }
 
-.comp-slider {
-  width: 100%;
-  height: 100%;
-}
-
-// @keyframes slide-side {
-//   0% {
-//     margin-left: 20%;
-//     width: 15px;
-//     transform: translateX(2%);
-//     background-position-x: 0% 0%;
-//   }
-//   50% {
-//     margin-left: 100%;
-//     width: 5000px;
-//     transform: translateX(100%);
-//     background-position-x: 100% 100%;
-//   }
-//   100% {
-//     margin-left: 20%;
-//     width: 15px;
-//     transform: translateY(100%);
-//     background-position-y: 0% 0%;
-//   }
+// .comp-slider {
+//   width: 100%;
+//   height: 100%;
 // }
 
 @keyframes slide-side {
   0% {
-    // margin-left: 0;
-    // width: 100px;
-    // transform: translateX(2%);
-    // right: 50%;
     width: 0%;
-    // background-position-x: 100% 50%;
   }
   50% {
-    // left: 50%;
     width: 100%;
-    // transform: translateX(100%);
-    // background-position-x: -100% 0%;
   }
-  100% {
-    // margin-right: 100%;
-    // margin-top: 0%;
-    // height: 100%;
-    width: -100%;
-    // background-position-y: 50% 50%;
-  }
-  // 100% {
-  //   margin-right: 100%;
-  //   width: 10000px;
-  //   transform: translateX(-100%);
-  //   // background-position-y: 0% 0%;
-  // }
 }
 
-// .landingPageBG-true .comtainer-slider .comp-slider {
-//   display: inline-block;
-//   animation: progress-up 3s linear alternate;
-// }
+.landingPageBG-true .comtainer-slider {
+  animation: progress-up 5s linear alternate;
+}
 
-// @keyframes progress-up {
-//   0% {
-//     transform: translateX(40%) translateY(40%);
-//   }
-//   60% {
-//     transform: translateX(60%) translateY(60%);
-//     background-position-y: 50%, 50%;
-//   }
-//   100% {
-//     transform: translateX(100%) translateY(100%);
-//     background-position-y: 50%, 50%;
-//   }
-// }
+@keyframes progress-up {
+  0% { background-position-y: $comtainer-slider-height; }
+  50% { background-position-y: $comtainer-slider-height + 400px; }
+  100% { background-position-y: $comtainer-slider-height + 800px; }
+}
 
 // @if $enable-transitions {
 //   @keyframes progress-bar-stripes {
@@ -317,7 +255,7 @@ option {
 .bg-perf-pill {
   background-color: $performancePillBGColor;
   font-size: 0.6rem;
-  width: 60px;
+  width: 50px;
   height: 16px;
 }
 
@@ -373,6 +311,16 @@ option {
   top: 0;
   left: 0;
 }
+
+// .nav-menu1-992 .nav-menu-768 .nav-menu-items .navbar-logo{
+//   height: 100vh;
+//   width: 10%;
+// }
+
+// .nav-menu-576 {
+//   height: 0;
+//   width: 0%;
+// }
 
 .nav-item {
   background-color: $bgNavMenu;
@@ -525,22 +473,6 @@ h1.exception:after {
   font-size: 0.9rem;
   display: flex;
   justify-content: center;
-}
-
-.dimensions1 .dimensions2{
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-}
-
-.dimensions3 .dimensions4 {
-  height: 100vh;
-  width: 50%;
-}
-
-.dimensions5 {
-  height: 0;
-  width: 0%;
 }
 
 //   .showInfo {
